@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 썸네일 추출기</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <main class="container">
+        <div class="glass-card">
+            <header>
+                <h1>유튜브 썸네일 추출기</h1>
+                <p>고화질 썸네일을 간편하게 다운로드하세요</p>
+            </header>
+
+            <section class="input-section">
+                <div class="input-wrapper">
+                    <input type="text" id="urlInput" placeholder="유튜브 동영상 링크를 붙여넣으세요" autocomplete="off">
+                    <button id="extractBtn">
+                        <span>추출하기</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                    <div class="input-border"></div>
+                </div>
+                <p id="errorMessage" class="error-message"></p>
+            </section>
+
+            <section id="resultSection" class="result-section hidden">
+                <div class="preview-container">
+                    <img id="thumbnailPreview" src="" alt="썸네일 미리보기">
+                    <div class="loading-overlay hidden">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <a id="downloadBtn" href="#" download="thumbnail.jpg" class="btn primary-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        다운로드
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
